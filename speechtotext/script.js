@@ -1,10 +1,10 @@
-
 var startButton = document.getElementById('start');
 var resultElement = document.getElementById('result');
 
 var recognition = new webkitSpeechRecognition();
 
-recognition.lang = window.navigator.language;
+// Đặt ngôn ngữ là Tiếng Việt
+recognition.lang = 'vi-VN';
 recognition.interimResults = true;
 
 startButton.addEventListener('click', () => { recognition.start(); });

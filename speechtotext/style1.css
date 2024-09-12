@@ -2,68 +2,64 @@ body{
     font-family: arial;
     font-size: 16px;
     margin: 0;
-    background:linear-gradient(to right bottom, #d13cff, #013f6a);
+    background-color: #fff;
     color: #000;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     min-height: 100vh;
     overflow: hidden;
     position: relative;
 }
+
+section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 .speech_to_text{
-    width: 42%;
-    text-align: center;
-}
-h1{
-    position: absolute;
-    top: 1;
-    left: 1;
-    right: 1;
-    height: 100px;
-    z-index: 100;
-    font-size: 48px;
-    font-weight: bolder;
-    text-shadow: 7px 13px 7px #fff;
-    font-family: 'Courier New', Courier, monospace;
-    transform: skewX(-15deg);
-}
-h1:hover {
-    animation: title 1s ease forwards;
-    overflow: hidden;
-    cursor: pointer;
-}
-@keyframes title {
-    from {
-        transform: scale(1) skewX(-15deg);
-    }
-    to {
-        transform: scale(1.1) skewX(-15deg);
-    }
+    width: 100%;
+    text-align: center; 
 }
 
-.slogan1{
+header {
+    align-self: start;
+    order: -1;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.9);
+    min-height: 200px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+h1 {
+    color: #fff;
+    line-height: 0.6;
+}
+header h1:nth-child(1),header h1:nth-child(3){
+    font-size: 60px;
+    color: yellow;
+}
+header h1:nth-child(1){
+    padding: 40px 0 0 20px;
+}
+header h1:nth-child(2){
+    line-height: .6;
+    margin: -20px 0 -20px 120px;
+}
+
+header h1:nth-child(3){
+    margin: 30px 0 0 40px;
+    text-decoration: underline;
+}
+
+.slogan{
+    color: #000;
+    opacity: .6;
+    display: flex;
     text-align: justify;
-    font-size: 20px;
+    justify-content: center;
+    font-size: 16px;
     font-weight: 600;
     line-height: 36px;
     letter-spacing: 1.5px;
-    margin-bottom: 100px;
-    margin-top: -100px;
-    transform: skewX(-5deg);
-    color: #000;
+    margin: 5em 0 2em 0;
     text-shadow: 0 1px 10px #fff;
-    animation: fadeText 3s ease-in-out forwards;
-}
-@keyframes fadeText {
-    from {
-        opacity: 0;
-        transform: translateX(-10px) translateY(-10px);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0) translateY(0);
-    }
 }
 
 
@@ -119,7 +115,7 @@ h1:hover {
    #result{
    --glow-color: rgb(217, 176, 255);
    --glow-spread-color: rgba(191, 123, 255, 0.781);
-    width: 100%;
+    width: 50%;
     height: 200px;
     border-radius: 15px;
     resize: none;
